@@ -24,6 +24,11 @@ app.use(express.query());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req, res, next) {
+  console.log(req);
+  next();
+});
+
 app.use('/', index);
 app.use('/users', users);
 app.use('/wx', wx);
