@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var wx = require('./routes/wx_connect.js');
+var wx = require('./routes/wx_handler');
 
 var app = express();
 
