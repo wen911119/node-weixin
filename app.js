@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var wechat = require('wechat');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -31,7 +32,48 @@ app.use(function(req, res, next) {
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/wx', wx);
+// app.use('/wx', wx);
+
+
+
+app.use('/wx', wechat('wen911119').text(function (message, req, res, next) {
+    // TODO
+    console.log(1234567890);
+    res.reply('text');
+    next();
+}).image(function (message, req, res, next) {
+    // TODO
+    res.reply('img');
+    next();
+}).voice(function (message, req, res, next) {
+    // TODO
+    res.reply('voice.');
+    next();
+}).video(function (message, req, res, next) {
+    // TODO
+    res.reply('video.');
+    next();
+}).location(function (message, req, res, next) {
+    // TODO
+    res.reply('location.');
+    next();
+}).link(function (message, req, res, next) {
+    // TODO
+    res.reply('link.');
+    next();
+}).event(function (message, req, res, next) {
+    // TODO
+    res.reply('event.');
+    next();
+}).device_text(function (message, req, res, next) {
+    // TODO
+    res.reply('这条回复会推到设备里去.');
+    next();
+}).device_event(function (message, req, res, next) {
+    // TODO
+    res.reply('这条回复会推到设备里去.evevt');
+    next();
+}).middlewarify());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
