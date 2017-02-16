@@ -13,30 +13,40 @@ var config = {
 
 router.get('/', wechat('wen911119').text(function (message, req, res, next) {
     // TODO
+    console.log(123456789);
     res.reply('text');
+    next();
 }).image(function (message, req, res, next) {
     // TODO
     res.reply('img');
+    next();
 }).voice(function (message, req, res, next) {
     // TODO
     res.reply('voice.');
+    next();
 }).video(function (message, req, res, next) {
     // TODO
     res.reply('video.');
+    next();
 }).location(function (message, req, res, next) {
     // TODO
     res.reply('location.');
+    next();
 }).link(function (message, req, res, next) {
     // TODO
     res.reply('link.');
+    next();
 }).event(function (message, req, res, next) {
     // TODO
     res.reply('event.');
+    next();
 }).device_text(function (message, req, res, next) {
     // TODO
     res.reply('这条回复会推到设备里去.');
+    next();
 }).device_event(function (message, req, res, next) {
     // TODO
     res.reply('这条回复会推到设备里去.evevt');
+    next();
 }).middlewarify());
 module.exports = router;
