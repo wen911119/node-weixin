@@ -1,3 +1,7 @@
+var express = require('express');
+var router = express.Router();
+
+
 var wechat = require('wechat');
 var config = {
     token: 'wen911119',
