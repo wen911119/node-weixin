@@ -25,10 +25,6 @@ app.use(express.query());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(function(req, res, next) {
-  console.log(req);
-  next();
-});
 
 app.use('/', index);
 app.use('/users', users);
@@ -39,7 +35,7 @@ app.use('/users', users);
 app.use('/wx', wechat('wen911119').text(function (message, req, res, next) {
     // TODO
     console.log(1234567890);
-    res.reply('text');
+    res.reply('text2');
     next();
 }).image(function (message, req, res, next) {
     // TODO
