@@ -28,39 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-// app.use('/wx', wx);
+app.use('/wx', wx);
 
-
-
-app.use('/wx', wechat('wen911119').text(function (message, req, res, next) {
-    // TODO
-    console.log(1234567890);
-    res.reply('text2');
-}).image(function (message, req, res, next) {
-    // TODO
-    res.reply('img');
-}).voice(function (message, req, res, next) {
-    // TODO
-    res.reply('voice.');
-}).video(function (message, req, res, next) {
-    // TODO
-    res.reply('video.');
-}).location(function (message, req, res, next) {
-    // TODO
-    res.reply('location.');
-}).link(function (message, req, res, next) {
-    // TODO
-    res.reply('link.');
-}).event(function (message, req, res, next) {
-    // TODO
-    res.reply('event.');
-}).device_text(function (message, req, res, next) {
-    // TODO
-    res.reply('这条回复会推到设备里去.');
-}).device_event(function (message, req, res, next) {
-    // TODO
-    res.reply('这条回复会推到设备里去.evevt');
-}).middlewarify());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
