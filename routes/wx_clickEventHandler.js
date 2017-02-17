@@ -7,7 +7,7 @@ function clickEventHandler(ekey) {
         case "wx_user_center":
             res="用户中心";
             break;
-        case "wx_bind_devic":
+        case "wx_bind_device":
             res="绑定设备";
             break;
         case "wx_unbind_device":
