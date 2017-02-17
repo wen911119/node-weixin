@@ -14,7 +14,7 @@ function clickEventHandler(ekey,msg) {
                     title: '设备绑定',
                     description: '点我进入设备绑定页',
                     picurl: 'http://img2.banggo.com/sources/cms/M2016/0216-ms.jpg',
-                    url: 'http://sueinlee.com/openid='+msg.FromUserName
+                    url: 'http://sueinlee.com?openid='+msg.FromUserName
                 }
             ];
             break;
