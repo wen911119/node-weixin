@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1238c60-a5f6-436e-9769-ea314b2792e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/wxEventHandler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/wx_clickEventHandler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/wx_handler.js" afterPath="$PROJECT_DIR$/routes/wx_handler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/wxEventHandler.js" afterPath="$PROJECT_DIR$/routes/wxEventHandler.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,23 +32,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wx_handler.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wx_handler.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/wx_handler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="133">
+              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wxEventHandler.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wxEventHandler.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/wxEventHandler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="190">
+              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding>
-                <element signature="n#!!doc;n#EventHandler#0" expanded="false" />
+                <element signature="e#0#41#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wx_clickEventHandler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/wx_clickEventHandler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding>
+                <element signature="n#!!doc;n#clickEventHandler#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -80,8 +92,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/wxEventHandler.js" />
         <option value="$PROJECT_DIR$/routes/wx_handler.js" />
+        <option value="$PROJECT_DIR$/routes/wxEventHandler.js" />
+        <option value="$PROJECT_DIR$/routes/wx_clickEventHandler.js" />
       </list>
     </option>
   </component>
@@ -226,6 +239,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d1238c60-a5f6-436e-9769-ea314b2792e0" name="Default" comment="" />
@@ -233,7 +249,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487310907965</updated>
-      <workItem from="1487310909549" duration="2591000" />
+      <workItem from="1487310909549" duration="4048000" />
     </task>
     <task id="LOCAL-00001" summary="去掉next（）&#10;">
       <created>1487320337043</created>
@@ -256,11 +272,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487321152568</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="独立处理按钮点击的事件处理&#10;">
+      <created>1487322308332</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1487322308332</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2591000" />
+    <option name="totallyTimeSpent" value="4048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -295,7 +318,8 @@
     <MESSAGE value="去掉next（）&#10;" />
     <MESSAGE value="处理逻辑换到单独文件里&#10;" />
     <MESSAGE value="打印出事件推送的具体内容&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="打印出事件推送的具体内容&#10;" />
+    <MESSAGE value="独立处理按钮点击的事件处理&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="独立处理按钮点击的事件处理&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -318,21 +342,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/wxEventHandler.js">
+    <entry file="file://$PROJECT_DIR$/routes/wx_handler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/wx_clickEventHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
-            <element signature="n#!!doc;n#EventHandler#0" expanded="false" />
+            <element signature="n#!!doc;n#clickEventHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/wx_handler.js">
+    <entry file="file://$PROJECT_DIR$/routes/wxEventHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="190">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
