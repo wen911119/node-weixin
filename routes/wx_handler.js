@@ -11,7 +11,7 @@ var config = {
 };
 
 
-router.get('/', wechat('wen911119').text(function (message, req, res, next) {
+router.post('/', wechat('wen911119').text(function (message, req, res, next) {
     // TODO
     console.log(123456789);
     res.reply('text');
