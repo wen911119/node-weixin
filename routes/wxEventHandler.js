@@ -7,7 +7,7 @@ var clickEventHandler = require("./wx_clickEventHandler.js");
     var res="事件处理结果";
     switch (msg.Event){
         case "CLICK":
-            res=clickEventHandler(msg.EventKey);
+            res=clickEventHandler(msg.EventKey,msg);
             break;
         case "subscribe":
             res="订阅";
