@@ -32,6 +32,7 @@ router.post('/', wechat('wen911119').text(function (message, req, res, next) {
     res.reply('link.');
 }).event(function (message, req, res, next) {
     // TODO
+    console.log(message);
     res.reply('event.');
 }).device_text(function (message, req, res, next) {
     // TODO
