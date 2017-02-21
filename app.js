@@ -52,4 +52,15 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://139.224.131.247/jiaoben_db');
+var Cat = mongoose.model('Cat', { name: String });
+var kitty = new Cat({name:'wj'});
+kitty.save(function(err){
+    if(err){
+        console.log(err);
+    }
+    console.log('ok');
+});
+
 module.exports = app;
