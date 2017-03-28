@@ -9,12 +9,15 @@ function EventHandler(msg) {
     switch (msg.Event) {
         case "CLICK":
             res = clickEventHandler(msg.EventKey, msg);
+            return res;
             break;
         case "subscribe":
             res = "订阅";
+            return res;
             break;
         case "unsubscribe":
             res = "取消订阅";
+            return res;
             break;
         case 'SCAN':
             let msgs = msg.EventKey.split('a');
@@ -23,23 +26,25 @@ function EventHandler(msg) {
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
-                body: "openid="+msg.FromUserName+"&deviceid="+msgs[0]+"&appid="+msgs[1]+"&developerid="+msgs[2]
+                body: "openid=" + msg.FromUserName + "&deviceid=" + msgs[0] + "&appid=" + msgs[1] + "&developerid=" + msgs[2]
             }).then(function (data) {
                 return data.json()
-            }).then(function(jsonData){
-                if(jsonData.status=='ok'){
+            }).then(function (jsonData) {
+                if (jsonData.status == 'ok') {
                     res = '绑定成功'
-                }else{
-                    res = '绑定失败，失败原因：'+jsonData.msg
+                } else {
+                    res = '绑定失败，失败原因：' + jsonData.msg
                 }
-            });
-            res = msg.EventKey;
+            }).catch(e => res = 'error')
+                .finally(function () {
+                    return res;
+                });
             break;
         default:
             res = "默认处理";
+            return res;
             break;
     };
-    return res;
 };
 
 module.exports = EventHandler;
