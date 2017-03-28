@@ -47,9 +47,7 @@ function EventHandler(msg) {
                 break;
         };
     });
-    p.then(function(data){
-        return data;
-    }).catch(e=>'error')
+    return p
 };
 
 module.exports = EventHandler;

@@ -32,7 +32,10 @@ router.post('/', wechat('wen911119').text(function (message, req, res, next) {
 }).event(function (message, req, res, next) {
     // TODO
     console.log(message);
-    res.reply(require("./wxEventHandler.js")(message));
+    require("./wxEventHandler.js")(message).then(function(data){
+        res.reply(data);
+    }).catch(e=>res.reply('error'));
+    
 }).device_text(function (message, req, res, next) {
     // TODO
     res.reply('这条回复会推到设备里去.');
