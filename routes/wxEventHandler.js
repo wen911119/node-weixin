@@ -18,7 +18,7 @@ function EventHandler(msg) {
             break;
         case 'SCAN':
             let msgs = msg.EventKey.split('a');
-            fetch("http://1270.0.0.1:4040/api/device/bind", {
+            fetch("http://127.0.0.1:4040/api/device/bind", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
