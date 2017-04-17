@@ -10,14 +10,25 @@ router.get('/getqrcode', function (req, res, next) {
     const param = req.query.code;
     console.log(param);
     wxapi.createLimitQRCode(param, function (err, result) {
-        if(err){
-             res.send('');
-        }else{
+        if (err) {
+            res.send('');
+        } else {
             res.send(wxapi.showQRCodeURL(result.ticket));
         }
     });
+});
 
-   
+router.get('/gettempqrcode', function (req, res, next) {
+    const param = req.query.code;
+    console.log(param);
+    wxapi.createTmpQRCode(param, 1800, function (err, result) {
+        if (err) {
+            res.send('');
+        } else {
+            console.log(result);
+            res.send(wxapi.showQRCodeURL(result.ticket));
+        }
+    });
 });
 
 module.exports = router;
