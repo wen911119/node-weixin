@@ -21,13 +21,13 @@ function EventHandler(msg) {
                 resolve(res);
                 break;
             case 'SCAN':
-                var msgs = msg.EventKey.split('a');
+                var deviceId = 'E'+msg.EventKey;
                 fetch("http://127.0.0.1:4040/api/device/bind", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded"
                     },
-                    body: "openid=" + msg.FromUserName + "&deviceid=" + msgs[0] + "&appid=" + msgs[1] + "&developerid=" + msgs[2]
+                    body: "openid=" + msg.FromUserName + "&deviceid=" + deviceId
                 }).then(function (data) {
                     return data.json()
                 }).then(function (jsonData) {
