@@ -31,7 +31,7 @@ function EventHandler(msg) {
                 }).then(function (data) {
                     return data.json()
                 }).then(function (jsonData) {
-                    
+                    console.log(jsonData, 11111111);
                     if (jsonData.status == 'ok') {
                         res = '绑定成功'
                     } else {
