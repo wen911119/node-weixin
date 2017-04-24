@@ -13,8 +13,8 @@ function EventHandler(msg) {
                 resolve(res);
                 break;
             case "subscribe":
-                console.log(msg.EventKey, 3333333);
-                var deviceId = 'E'+msg.EventKey;
+                let event_key = msg.EventKey.replace("qrscene_","")
+                var deviceId = 'E'+event_key;
                 fetch("http://127.0.0.1:4040/api/users/bind", {
                     method: "POST",
                     headers: {
