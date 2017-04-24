@@ -22,7 +22,7 @@ function EventHandler(msg) {
                 break;
             case 'SCAN':
                 var deviceId = 'E'+msg.EventKey;
-                fetch("http://127.0.0.1:4040/api/device/bind", {
+                fetch("http://127.0.0.1:4040/api/users/bind", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded"
