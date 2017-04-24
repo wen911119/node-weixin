@@ -13,6 +13,7 @@ function EventHandler(msg) {
                 resolve(res);
                 break;
             case "subscribe":
+                console.log(msg.EventKey, 3333333);
                 var deviceId = 'E'+msg.EventKey;
                 fetch("http://127.0.0.1:4040/api/users/bind", {
                     method: "POST",
